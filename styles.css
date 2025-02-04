@@ -144,8 +144,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-block: 40px;
   border-radius: 10px;
   background-color: var(--filter-background);
   padding: 10px;
@@ -504,5 +503,4 @@ li:hover {
   left: 50%;
   z-index: 9999;
   position: absolute !important;
-  justify-self: center !important;
 }
