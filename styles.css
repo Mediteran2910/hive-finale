@@ -1,0 +1,506 @@
+* {
+  margin: 0;
+  font-size: 14px;
+  font-family: "Nunito", serif;
+}
+
+:root {
+  --primary-orange: #f48c06;
+  --strong-orange: #e85d04;
+  --lighter-orange: #faa307;
+  --yellow-orange: #ffba08;
+  --filter-background: #f9f2ec;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffd9af;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fdf5e8' fill-opacity='0.28' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  width: 100%;
+  margin-block: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.smaller-screen-nav {
+  align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.smaller-screen-nav img {
+  width: 40px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter {
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--filter-background);
+}
+
+.cuopun-event-btn-wrapp {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 20px;
+}
+
+.coupon-event-styl {
+  width: 45%;
+  height: 45px;
+  border: 2px solid var(--primary-orange);
+  border-radius: 10px;
+  font-size: 1.3em;
+  background-color: transparent;
+  color: var(--primary-orange);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in,
+    box-shadow 0.3s ease-in;
+}
+
+/* .coupon-event-styl:hover {
+  color: var(--filter-background);
+  background-color: var(--yellow-orange);
+  border: 2px solid var(--yellow-orange);
+} */
+
+.coupon-event-styl:hover,
+.location-calendar-btn:hover {
+  box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+}
+
+.location-calendar-wrapp {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.location-calendar-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 2px solid var(--primary-orange);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.12rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in;
+}
+
+.location-calendar-btn img {
+  margin-inline: 10px;
+  width: 20px;
+  height: auto;
+}
+
+#location-btn-text,
+#date-btn-text {
+  font-size: 1.12rem;
+}
+
+.card {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-block: 40px;
+  border-radius: 10px;
+  background-color: var(--filter-background);
+  padding: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-loc-cal-wrapp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 15px;
+}
+
+.card-loc-cal-wrapp img {
+  margin-right: 10px;
+  width: 20px;
+  height: auto;
+}
+
+.card-loc-cal-wrapp p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-orange);
+  margin-block: 10px;
+  margin-top: 20px;
+}
+
+.like-details-wrapp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+.info-wrapp {
+  width: 90%;
+  align-self: center;
+}
+
+#details-btn {
+  width: 140px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--filter-background);
+  background-color: var(--primary-orange);
+  border: none;
+  letter-spacing: 1.05px;
+}
+
+/* CSS CLASSES FOR MANIPULATING DOM */
+
+.active-filter-button {
+  color: var(--filter-background);
+  background-color: var(--primary-orange);
+}
+
+/* SEARCH WINDOW */
+.search-by-location {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--filter-background);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: none;
+}
+
+.close-icon {
+  align-self: flex-end;
+  width: 25px;
+  height: auto;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.search-input-wrapp {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.search-input-wrapp img {
+  width: 25px;
+  height: auto;
+  margin: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-orange);
+  border: none;
+  margin-bottom: 20px;
+}
+
+#search-bar {
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  margin-left: 10px;
+  font-size: 1.3rem;
+  font-family: "Nunito", serif;
+}
+
+#search-bar::placeholder {
+  font-size: 1.3rem;
+  color: black;
+}
+
+.city-wrap {
+  width: 100%;
+}
+
+li {
+  font-size: 1.45rem;
+  margin-block: 25px;
+  list-style: none;
+  width: auto;
+  transition: color 0.3s ease-out, font-weight 0.3s ease;
+}
+
+li:hover {
+  cursor: pointer;
+  color: var(--primary-orange);
+  font-weight: 600;
+}
+
+.scale-in-ver-bottom {
+  -webkit-animation: scale-in-ver-bottom 0.3s
+    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-ver-bottom 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+.scale-out-ver-bottom {
+  -webkit-animation: scale-out-ver-bottom 0.3s
+    cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: scale-out-ver-bottom 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-2-4 18:34:37
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-out-ver-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-out-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+@keyframes scale-out-ver-bottom {
+  0% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    opacity: 1;
+  }
+}
+
+/* Date Picker */
+
+.date-selector {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--filter-background);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  display: none;
+}
+
+.weekly-date-wrapp {
+  align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weekly-btn {
+  width: 45%;
+  height: 40px;
+  border-radius: 15px;
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
+  background-color: var(--filter-background);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in,
+    box-shadow 0.3s ease-in;
+}
+
+.weekly-btn:hover {
+  box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+}
+
+.callendar-btn-wrapp {
+  width: 90%;
+  display: flex;
+  align-self: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.calendar-filter-btn {
+  border-radius: 10px;
+  width: 35%;
+  margin-top: 50px;
+  height: 30px;
+  color: var(--primary-orange);
+  background-color: transparent;
+  border: 2px solid var(--primary-orange);
+  cursor: pointer;
+}
+
+.calendar-wrapp {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-self: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flatpickr-calendar {
+  background: transparent !important; /* Makes the background transparent */
+  box-shadow: none !important; /* Removes default shadow */
+  border: 3px solid var(--primary-orange) !important; /* Removes border */
+  border-radius: 10px !important;
+  font-family: "Nunito", sans-serif !important; /* Change font family */
+  font-weight: 600 !important; /* Adjust font weight */
+}
+
+.flatpickr-day {
+  background: transparent !important; /* Transparent background for each day */
+  font-family: "Nunito", sans-serif !important; /* Change font family */
+  font-weight: 600 !important; /* Adjust font weight */
+}
+
+.flatpickr-months,
+.flatpickr-weekdays {
+  background: transparent !important; /* Transparent background for month & weekdays */
+  font-family: "Nunito", sans-serif !important; /* Change font family */
+  font-weight: 600 !important; /* Adjust font weight */
+}
+
+.flatpickr-day.selected {
+  background: var(--strong-orange) !important; /* Slightly visible selection */
+  border-radius: 5px;
+}
+
+.flatpickr-container {
+  min-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.flatpickr-calendar {
+  top: 100%;
+  left: 50%;
+  z-index: 9999;
+  position: absolute !important;
+}
