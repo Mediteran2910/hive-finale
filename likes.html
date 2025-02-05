@@ -9,13 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <!-- Flatpickr CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
-    />
-
-    <title>Hive</title>
+    <title>Document</title>
   </head>
   <body>
     <header>
@@ -37,74 +31,11 @@
       </nav>
     </header>
     <main>
-      <section class="filter">
-        <div class="cuopun-event-btn-wrapp">
-          <button id="coupon-btn" class="coupon-event-styl">Coupon</button>
-          <button id="event-btn" class="coupon-event-styl">Event</button>
-        </div>
-        <div class="location-calendar-wrapp">
-          <button id="location-btn" class="location-calendar-btn">
-            <img src="icone/location-icon.png" alt="location pin icon" />
-            <span id="location-btn-text">Enter your location...</span>
-          </button>
-          <button id="date-btn" class="location-calendar-btn">
-            <img src="icone/calendar.png" alt="calendar icon" />
-            <span id="date-btn-text">Select date...</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="search-by-location">
-        <img
-          src="icone/close-icon.png"
-          alt=""
-          id="close-search-icon"
-          class="close-icon"
-        />
-        <div class="search-input-wrapp">
-          <img src="icone/search-icon.png" alt="" />
-          <input type="text" placeholder="Enter location..." id="search-bar" />
-        </div>
-        <hr />
-        <div class="city-wrapp">
-          <ul>
-            <li>Zagreb, Croatia</li>
-            <li>Split, Croatia</li>
-            <li>Rijeka, Croatia</li>
-            <li>Zadar, Croatia</li>
-            <li>Sibenik, Croatia</li>
-            <li>Pula, Croatia</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="date-selector">
-        <img
-          src="icone/close-icon.png"
-          alt=""
-          class="close-icon"
-          id="close-date-icon"
-        />
-        <div class="weekly-date-wrapp">
-          <button class="weekly-btn" id="today-date-btn">Today</button>
-          <button class="weekly-btn" id="week-date-btn">This Week</button>
-        </div>
-        <div class="callendar-btn-wrapp">
-          <button class="calendar-filter-btn" id="single-day">
-            Select Day
-          </button>
-          <button class="calendar-filter-btn" id="custom-period">
-            Custom Period
-          </button>
-        </div>
-        <div>
-          <!-- Hidden Inputs for Flatpickr -->
-          <input type="text" id="single-date-picker" style="display: none" />
-          <input type="text" id="custom-period-picker" style="display: none" />
-        </div>
-        <div class="flatpickr-container"></div>
-      </section>
-
+      <div class="likes-filter-wrapp">
+        <button class="like-filter">Today</button>
+        <button class="like-filter">3 Days</button>
+        <button class="like-filter">Week</button>
+      </div>
       <section class="card">
         <img
           src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
@@ -172,10 +103,6 @@
         </div>
       </section>
     </main>
-    <footer></footer>
-    <!-- Flatpickr JS -->
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-    <script src="app.js"></script>
+    <script src="likes.js"></script>
   </body>
 </html>

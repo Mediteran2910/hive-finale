@@ -11,6 +11,42 @@ const dateHomeBtn = document.getElementById("date-btn");
 const dateBtnText = document.getElementById("date-btn-text");
 const closeDateIcon = document.getElementById("close-date-icon");
 const dateSelectPage = document.querySelector(".date-selector");
+const likeBtn = document.querySelectorAll("#like-icon");
+const cards = document.getElementsByClassName("card");
+const burgerIcon = document.getElementById("burger-icon");
+const mobileMenu = document.getElementById("menu");
+const closeMenuBtn = document.getElementById("burger-close-icon");
+
+burgerIcon.addEventListener("click", () => {
+  mobileMenu.style.display = "flex";
+  mobileMenu.classList.remove("swing-out-top-bck");
+  mobileMenu.classList.add("swing-in-top-fwd");
+});
+
+closeMenuBtn.addEventListener("click", () => {
+  mobileMenu.classList.remove("swing-in-top-fwd");
+  mobileMenu.classList.add("swing-out-top-bck");
+  setTimeout(() => (mobileMenu.style.display = "none"), 250);
+});
+
+const likeNotification = (card) => {
+  const notification = document.createElement("p");
+  notification.textContent = "Added to the Likes section! 🎉";
+  notification.classList.add("like-notification");
+  card.appendChild(notification);
+  setTimeout(() => notification.remove(), 2000);
+};
+
+likeBtn.forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    btn.classList.add("jello-horizontal");
+    btn.src = "icone/like-active.png";
+    const card = event.target.closest(".card");
+    if (card) {
+      likeNotification(card);
+    }
+  });
+});
 
 const pageEntrance = (element) => {
   element.style.display = "flex";
