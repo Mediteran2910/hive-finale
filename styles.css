@@ -776,3 +776,12 @@ li:hover {
   -webkit-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
   -moz-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
 }
+
+.likes-h1 {
+  font-size: 2rem;
+  width: 90%;
+  text-align: center;
+  margin-block: 20px;
+  margin-bottom: 40px;
+  color: var(--strong-orange);
+}
