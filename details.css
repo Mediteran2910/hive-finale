@@ -11,6 +11,24 @@
   --lighter-orange: #faa307;
   --yellow-orange: #ffba08;
   --filter-background: #f9f2ec;
+  --paragraph-color: #000e14;
+  --main-background-pattern-color: #ffd9af;
+  --main-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fdf5e8' fill-opacity='0.28' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --secondary-backgroun-pattern-color: #fffef7;
+  --secondary-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fccf7b' fill-opacity='0.17' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.dark-mode {
+  --primary-orange: #f48c06;
+  --strong-orange: #e85d04;
+  --lighter-orange: #faa307;
+  --yellow-orange: #ffba08;
+  --filter-background: #2f3037;
+  --paragraph-color: #f9f2ec;
+  --main-background-pattern-color: #00141f;
+  --main-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%235b5c62' fill-opacity='0.16' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --secondary-backgroun-pattern-color: #26262c;
+  --secondary-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23d9d9d9' fill-opacity='0.06' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 body {
@@ -20,6 +38,12 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  background-color: var(--secondary-backgroun-pattern-color);
+  background-image: var(--secondary-background-image);
+}
+
+p {
+  color: var(--paragraph-color);
 }
 
 header {
@@ -42,12 +66,26 @@ h1 {
   font-weight: 800;
 }
 
-#back-button {
-  margin: 20px;
-  border-radius: 10px;
-  border: 2px solid var(--filter-background);
+.header-btns-wrapp {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-self: center;
+}
+
+.like-btn {
+  border: none;
   background: transparent;
-  color: var(--filter-background);
+}
+
+#back-button {
+  border-radius: 10px;
+  border: 2px solid rgb(238, 238, 238);
+  background: transparent;
+  color: rgb(238, 238, 238);
   width: 90px;
   height: 40px;
   font-size: 1.3rem;
@@ -62,8 +100,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #fffaf7;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fcb98a' fill-opacity='0.12' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .container-main {
@@ -97,7 +133,7 @@ h2 {
 
 .details-text {
   font-size: 1.2rem;
-  color: black;
+  color: var(--paragraph-color);
   font-weight: 400;
 }
 
@@ -107,6 +143,7 @@ h2 {
   align-items: center;
   justify-content: center;
   margin-block: 5px;
+  margin-bottom: 10px;
 }
 
 h3 {
@@ -127,4 +164,247 @@ h3 {
   height: 300px;
   margin-block: 20px;
   background-color: rgb(70, 97, 70);
+}
+
+.small-info-icon {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.like-notification {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--primary-orange);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  align-self: center;
+  justify-self: center;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+  box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+}
+
+.dislike-notification {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--strong-orange);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  align-self: center;
+  justify-self: center;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+  box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+}
+
+.jello-horizontal {
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-2-4 23:51:0
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation jello-horizontal
+ * ----------------------------------------
+ */
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.shake-lr {
+  -webkit-animation: shake-lr 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+  animation: shake-lr 0.7s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2025-2-6 18:31:41
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation shake-lr
+ * ----------------------------------------
+ */
+@-webkit-keyframes shake-lr {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  90% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+}
+@keyframes shake-lr {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  10% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  80% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  90% {
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+}
+
+/* THEME TOOGLE */
+
+.mode {
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px solid var(--strong-orange);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+#sun-icon,
+#moon-icon {
+  border-radius: 10px;
+  border: none;
+  height: 80%;
+  width: 45%;
+}
+
+#sun-svg,
+#moon-svg {
+  stroke: var(--yellow-orange);
+  width: 85%;
+  height: auto;
+}
+
+.active-mode {
+  background-color: var(--strong-orange);
+}
+
+.inactive-mode {
+  background: transparent;
+  border: 2px solid var(--primary-orange);
+  background-color: none;
 }
