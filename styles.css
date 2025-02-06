@@ -128,15 +128,14 @@ main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-block: 20px;
 }
 
 .coupon-event-styl {
-  width: 45%;
+  width: 35%;
+  margin-inline: 0;
   height: 45px;
-  border: 2px solid var(--primary-orange);
-  border-radius: 10px;
   font-size: 1.3em;
   background-color: transparent;
   color: var(--primary-orange);
@@ -144,9 +143,27 @@ main {
   cursor: pointer;
   transition: color 0.3s ease-in, background-color 0.3s ease-in,
     box-shadow 0.3s ease-in;
+  border: 2px solid var(--primary-orange);
 }
 
-.coupon-event-styl:hover,
+#all-btn {
+  border-right: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#event-btn {
+  border-left: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.coupon-event-styl:hover {
+  -webkit-box-shadow: inset 0px 0px 2px 1px rgba(255, 157, 38, 1);
+  -moz-box-shadow: inset 0px 0px 2px 1px rgba(255, 157, 38, 1);
+  box-shadow: inset 0px 0px 2px 1px rgba(255, 157, 38, 1);
+}
+
 .location-calendar-btn:hover {
   box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
   -webkit-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
@@ -239,7 +256,7 @@ h2 {
   align-items: center;
   justify-content: space-between;
   margin-top: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 12.5px;
 }
 
 .info-wrapp {
@@ -258,10 +275,23 @@ h2 {
   text-decoration: none;
   text-align: center;
   align-content: center;
+  transition: color 0.3s ease-in, background-color 0.3s ease-in,
+    box-shadow 0.3s ease-in;
 }
 
-#like-icon {
-  width: 40px;
+.details-btn:hover {
+  box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(241, 120, 55, 0.75);
+}
+
+.like-btn {
+  border: none;
+  background: transparent;
+}
+
+.like-icon {
+  width: 45px;
   height: auto;
   cursor: pointer;
 }
@@ -269,9 +299,26 @@ h2 {
 .like-notification {
   font-weight: 500;
   font-size: 14px;
-  background-color: white;
-  color: black;
-  border: 2px solid var(--lighter-orange);
+  background-color: var(--primary-orange);
+  color: white;
+  border-radius: 10px;
+  padding: 15px;
+  position: fixed;
+  z-index: 500;
+  top: 0;
+  align-self: center;
+  justify-self: center;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+  box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
+}
+
+.dislike-notification {
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--strong-orange);
+  color: white;
   border-radius: 10px;
   padding: 15px;
   position: fixed;
@@ -364,7 +411,11 @@ h2 {
 
 .active-filter-button {
   color: var(--filter-background);
+  border: none;
   background-color: var(--primary-orange);
+  -webkit-box-shadow: inset 0px 0px 4px 0px rgba(31, 7, 0, 1);
+  -moz-box-shadow: inset 0px 0px 4px 0px rgba(31, 7, 0, 1);
+  box-shadow: inset 0px 0px 4px 0px rgba(31, 7, 0, 1);
 }
 
 /* SEARCH WINDOW */

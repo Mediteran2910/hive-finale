@@ -1,5 +1,6 @@
 const couponBtn = document.getElementById("coupon-btn");
 const eventBtn = document.getElementById("event-btn");
+const allBtn = document.getElementById("all-btn");
 const locationHomeBtn = document.getElementById("location-btn");
 const searchPage = document.querySelector(".search-by-location");
 const closeSearchBtn = document.getElementById("close-search-icon");
@@ -11,7 +12,7 @@ const dateHomeBtn = document.getElementById("date-btn");
 const dateBtnText = document.getElementById("date-btn-text");
 const closeDateIcon = document.getElementById("close-date-icon");
 const dateSelectPage = document.querySelector(".date-selector");
-const likeBtn = document.querySelectorAll("#like-icon");
+const likeBtns = document.querySelectorAll(".like-btn");
 const cards = document.getElementsByClassName("card");
 const burgerIcon = document.getElementById("burger-icon");
 const mobileMenu = document.getElementById("menu");
@@ -31,19 +32,41 @@ closeMenuBtn.addEventListener("click", () => {
 
 const likeNotification = (card) => {
   const notification = document.createElement("p");
-  notification.textContent = "Added to the Likes section! 🎉";
+  notification.textContent = "Added to the Likes list! 🎉";
   notification.classList.add("like-notification");
   card.appendChild(notification);
-  setTimeout(() => notification.remove(), 2000);
+  setTimeout(() => notification.remove(), 4000);
 };
 
-likeBtn.forEach((btn) => {
+const dislikeNotification = (card) => {
+  const notification = document.createElement("p");
+  notification.textContent = "Removed from the Likes list! 🥺 ";
+  notification.classList.add("dislike-notification");
+  card.appendChild(notification);
+  setTimeout(() => notification.remove(), 4000);
+};
+
+likeBtns.forEach((btn) => {
   btn.addEventListener("click", (event) => {
     btn.classList.add("jello-horizontal");
-    btn.src = "icone/like-active.png";
-    const card = event.target.closest(".card");
-    if (card) {
-      likeNotification(card);
+
+    const svg = btn.querySelector("svg");
+    if (svg) {
+      const path = svg.querySelector("path");
+      if (path) {
+        const isFilled = path.getAttribute("fill") === "#f48c06";
+
+        path.setAttribute("fill", isFilled ? "none" : "#f48c06");
+
+        const card = event.target.closest(".card");
+        if (card) {
+          if (isFilled) {
+            dislikeNotification(card);
+          } else {
+            likeNotification(card);
+          }
+        }
+      }
     }
   });
 });
@@ -64,10 +87,18 @@ const pageExit = (element) => {
 couponBtn.addEventListener("click", () => {
   couponBtn.classList.add("active-filter-button");
   eventBtn.classList.remove("active-filter-button");
+  allBtn.classList.remove("active-filter-button");
 });
 
 eventBtn.addEventListener("click", () => {
   eventBtn.classList.add("active-filter-button");
+  couponBtn.classList.remove("active-filter-button");
+  allBtn.classList.remove("active-filter-button");
+});
+
+allBtn.addEventListener("click", () => {
+  allBtn.classList.add("active-filter-button");
+  eventBtn.classList.remove("active-filter-button");
   couponBtn.classList.remove("active-filter-button");
 });
 
