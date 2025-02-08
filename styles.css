@@ -71,6 +71,46 @@ nav {
   width: 40px;
 }
 
+.wider-screen-nav {
+  display: none;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wider-screen-nav a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--primary-orange);
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px;
+  transition: color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+.wider-screen-nav a:hover {
+  color: var(--strong-orange);
+  border: 2px solid var(--strong-orange);
+  transform: scale(1.1);
+}
+
+.wider-screen-nav-links {
+  max-width: 700px;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.active-links {
+  color: var(--filter-background);
+  background-color: var(--primary-orange);
+  transform: scale(1.1);
+}
+
 #burger-icon {
   border: none;
   background: transparent;
@@ -143,6 +183,7 @@ main {
   justify-content: center;
   border-radius: 10px;
   background-color: var(--filter-background);
+  max-width: 575px;
 }
 
 form {
@@ -247,6 +288,14 @@ form {
   color: var(--paragraph-color);
 }
 
+.cards-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .card {
   width: 85%;
   display: flex;
@@ -258,6 +307,7 @@ form {
   border-radius: 10px;
   background-color: var(--filter-background);
   padding: 10px;
+  max-width: 360px;
 }
 
 .card-img {
@@ -347,16 +397,17 @@ h2 {
   padding: 15px;
   position: fixed;
   z-index: 500;
-  top: 0;
-  align-self: center;
-  justify-self: center;
-  margin: 20px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
   -webkit-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
   -moz-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
   box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
 }
 
 .dislike-notification {
+  width: 200px;
   font-weight: 500;
   font-size: 14px;
   background-color: var(--strong-orange);
@@ -365,10 +416,9 @@ h2 {
   padding: 15px;
   position: fixed;
   z-index: 500;
-  top: 0;
-  align-self: center;
-  justify-self: center;
-  margin: 20px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   -webkit-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
   -moz-box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
   box-shadow: 0px 0px 15px 1px rgba(31, 7, 0, 1);
@@ -1037,5 +1087,98 @@ li:hover {
     -webkit-transform: rotate3d(1, 1, 0, 0deg);
     transform: rotate3d(1, 1, 0, 0deg);
     opacity: 0;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (min-width: 750px) {
+  .cards-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .card {
+    margin-inline: 20px;
+  }
+}
+
+@media (min-width: 840px) {
+  .smaller-screen-nav {
+    display: none;
+  }
+  header {
+    margin-bottom: 40px;
+  }
+
+  .search-by-location {
+    top: 15%;
+    left: 15%;
+    bottom: 15%;
+    right: 15%;
+    border-radius: 10px;
+  }
+
+  .date-selector {
+    top: 15%;
+    left: 15%;
+    bottom: 15%;
+    right: 15%;
+    border-radius: 10px;
+  }
+
+  .search-by-location img {
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter,
+  form {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 1100px;
+  }
+
+  .location-calendar-wrapp {
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    width: auto;
+    margin-right: 20px;
+  }
+
+  .filter {
+    max-width: 90%;
+  }
+
+  .cuopun-event-btn-wrapp {
+    max-width: 320px;
+    height: 50px;
+    margin-left: 20px;
+  }
+
+  .coupon-event-styl {
+    height: 50px;
+  }
+
+  .location-calendar-btn {
+    width: 250px;
+    margin-inline: 10px;
+  }
+
+  #form-submit-btn {
+    max-width: 150px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 840px) {
+  .wider-screen-nav {
+    display: none;
+    max-width: 1200px;
   }
 }

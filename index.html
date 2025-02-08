@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="styles.css" />
     <!-- Flatpickr CSS -->
     <link
@@ -71,6 +72,50 @@
             </div>
           </div>
         </div>
+        <div class="wider-screen-nav">
+          <h3>HIVE</h3>
+          <div class="wider-screen-nav-links">
+            <a href="index.html">Home</a>
+            <a href="likes.html">Likes</a>
+            <a href="">About Us</a>
+          </div>
+          <div class="mode">
+            <button id="sun-icon" class="active-mode">
+              <svg
+                id="sun-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="black"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+            </button>
+            <button id="moon-icon" class="inactive-mode">
+              <svg
+                id="moon-svg"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="black"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </nav>
     </header>
     <main>
@@ -94,7 +139,7 @@
               type="button"
             >
               <img src="icone/location-icon.png" alt="location pin icon" />
-              <span id="location-btn-text">Enter your location...</span>
+              <span id="location-btn-text">Enter location...</span>
             </button>
             <button id="date-btn" class="location-calendar-btn" type="button">
               <img src="icone/calendar.png" alt="calendar icon" />
@@ -104,7 +149,6 @@
           </div>
         </form>
       </section>
-
       <section class="search-by-location">
         <img
           src="icone/close-icon.png"
@@ -156,125 +200,589 @@
         <div class="flatpickr-container"></div>
       </section>
 
-      <section class="card">
-        <img
-          src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
-          alt="image bla bla"
-          class="card-img"
-        />
-        <div class="info-wrapp">
-          <h2>Heineken 0.5l - 50%</h2>
-          <div class="card-loc-cal-wrapp">
-            <img src="icone/location2-icon.png" alt="" />
-            <p>Flag Pub, Split</p>
+      <section class="cards-wrapper">
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-          <div class="card-loc-cal-wrapp">
-            <img src="icone/calendar2-icon.png" alt="" />
-            <p>13.04.2025.</p>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-          <div class="like-details-wrapp">
-            <button class="like-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="var(--primary-orange)"
-                width="50"
-                height="50"
-                class="like-icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                />
-              </svg>
-            </button>
-            <a href="details.html" class="details-btn">Details</a>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="card">
-        <img
-          src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
-          alt="image bla bla"
-          class="card-img"
-        />
-        <div class="info-wrapp">
-          <h2>Heineken 0.5l - 50%</h2>
-          <div class="card-loc-cal-wrapp">
-            <img src="icone/location2-icon.png" alt="" />
-            <p>Flag Pub, Split</p>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-          <div class="card-loc-cal-wrapp">
-            <img src="icone/calendar2-icon.png" alt="" />
-            <p>13.04.2025.</p>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-          <div class="like-details-wrapp">
-            <button class="like-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="var(--primary-orange)"
-                width="50"
-                height="50"
-                class="like-icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                />
-              </svg>
-            </button>
-            <a href="details.html" class="details-btn">Details</a>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="card">
-        <img
-          src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
-          alt="image bla bla"
-          class="card-img"
-        />
-        <div class="info-wrapp">
-          <h2>Heineken 0.5l - 50%</h2>
-          <div class="card-loc-cal-wrapp">
-            <img src="icone/location2-icon.png" alt="" />
-            <p>Flag Pub, Split</p>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-          <div class="card-loc-cal-wrapp">
-            <img src="icone/calendar2-icon.png" alt="" />
-            <p>13.04.2025.</p>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-          <div class="like-details-wrapp">
-            <button class="like-btn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.75"
-                stroke="var(--primary-orange)"
-                width="50"
-                height="50"
-                class="like-icon"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
-                />
-              </svg>
-            </button>
-            <a href="details.html" class="details-btn">Details</a>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
           </div>
-        </div>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
+          </div>
+        </section>
+        <section class="card">
+          <img
+            src="pictures/amie-johnson-VJXLzQi5TlE-unsplash (1) 3.png"
+            alt="image bla bla"
+            class="card-img"
+          />
+          <div class="info-wrapp">
+            <h2>Heineken 0.5l - 50%</h2>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/location2-icon.png" alt="" />
+              <p>Flag Pub, Split</p>
+            </div>
+            <div class="card-loc-cal-wrapp">
+              <img src="icone/calendar2-icon.png" alt="" />
+              <p>13.04.2025.</p>
+            </div>
+            <div class="like-details-wrapp">
+              <button class="like-btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.75"
+                  stroke="var(--primary-orange)"
+                  width="50"
+                  height="50"
+                  class="like-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                  />
+                </svg>
+              </button>
+              <a href="details.html" class="details-btn">Details</a>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <hr />
+      <div class="footer-container">
+        <div class="footer-wrappers">
+          <h4 class="footer-title">About Us</h4>
+          <p>
+            At Hive, we bring you the best exclusive deals, and event
+            promotions. Our mission is to help you save money and stay updated
+            on exciting offers. Stay connected and never miss a great deal!
+          </p>
+        </div>
+        <div class="footer-wrappers">
+          <h4 class="footer-title">Contact</h4>
+          <div class="contact-footer-wraps">
+            <img src="Icone/Email22-icon.png" alt="postmail icon" />
+            <a href="mailto:windoftrade2910@gmail.com">blablabla@gmail.com</a>
+          </div>
+          <div class="contact-footer-wraps">
+            <img src="Icone/phone-icon.png" alt="phone icon" />
+            <a href="tel:+385955694957">+386 5903 243</a>
+          </div>
+          <div class="contact-footer-wraps">
+            <img src="Icone/linkedin-icon.png" alt="linkedin icon" />
+            <a href="https://github.com/Mediteran2910">blablaImeFirme</a>
+          </div>
+        </div>
+        <div class="footer-wrappers">
+          <h4 class="footer-title">Address</h4>
+          <p>Split, Croatia</p>
+        </div>
+      </div>
+
+      <p id="copyright">&copy; 2025 Hive. All rights reserved.</p>
+    </footer>
     <!-- Flatpickr JS -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 

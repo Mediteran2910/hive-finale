@@ -8,6 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="footer.css" />
     <link rel="stylesheet" href="details.css" />
     <title>Document</title>
   </head>
@@ -15,6 +16,42 @@
     <header>
       <div class="header-btns-wrapp">
         <a href="index.html" id="back-button">Back</a>
+        <div class="mode">
+          <button id="sun-icon" class="active-mode">
+            <svg
+              id="sun-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="black"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+              />
+            </svg>
+          </button>
+          <button id="moon-icon" class="inactive-mode">
+            <svg
+              id="moon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="black"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+              />
+            </svg>
+          </button>
+        </div>
         <button class="like-btn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +75,8 @@
     </header>
     <main>
       <section class="container-main">
-        <h2>Flag Pub, Split</h2>
         <div class="info-wrapper">
+          <h2>Flag Pub, Split</h2>
           <div class="single-info-wrapp">
             <img
               src="icone/calendar-icon3.png"
@@ -79,7 +116,9 @@
             adipisicing elit. Expedita quia autem.
           </p>
         </div>
-        <div>
+
+        <div class="location-container">
+          <hr />
           <h3>Location</h3>
           <p id="location-text">Ulica Rudera Boskovica 13, 21000, Split</p>
           <div class="placeholder-map"></div>
@@ -88,42 +127,38 @@
     </main>
 
     <footer>
-      <div class="mode">
-        <button id="sun-icon" class="active-mode">
-          <svg
-            id="sun-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="black"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-            />
-          </svg>
-        </button>
-        <button id="moon-icon" class="inactive-mode">
-          <svg
-            id="moon-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="black"
-            class="size-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-            />
-          </svg>
-        </button>
+      <hr />
+      <div class="footer-container">
+        <div class="footer-wrappers">
+          <h4 class="footer-title">About Us</h4>
+          <p>
+            At Hive, we bring you the best exclusive deals, and event
+            promotions. Our mission is to help you save money and stay updated
+            on exciting offers. Stay connected and never miss a great deal!
+          </p>
+        </div>
+        <div class="footer-wrappers">
+          <h4 class="footer-title">Contact</h4>
+          <div class="contact-footer-wraps">
+            <img src="Icone/Email22-icon.png" alt="postmail icon" />
+            <a href="mailto:windoftrade2910@gmail.com">blablabla@gmail.com</a>
+          </div>
+          <div class="contact-footer-wraps">
+            <img src="Icone/phone-icon.png" alt="phone icon" />
+            <a href="tel:+385955694957">+386 5903 243</a>
+          </div>
+          <div class="contact-footer-wraps">
+            <img src="Icone/linkedin-icon.png" alt="linkedin icon" />
+            <a href="https://github.com/Mediteran2910">blablaImeFirme</a>
+          </div>
+        </div>
+        <div class="footer-wrappers">
+          <h4 class="footer-title">Address</h4>
+          <p>Split, Croatia</p>
+        </div>
       </div>
+
+      <p id="copyright">&copy; 2025 Hive. All rights reserved.</p>
     </footer>
     <script src="details.js"></script>
   </body>

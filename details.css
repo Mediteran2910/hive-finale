@@ -408,3 +408,50 @@ h3 {
   border: 2px solid var(--primary-orange);
   background-color: none;
 }
+
+/* DETAILS RESPONSIVE */
+
+@media (min-width: 850px) {
+  .container-main {
+    width: 100%;
+    max-width: 1000px;
+
+    border-right: 2px solid var(--yellow-orange);
+    border-left: 2px solid var(--yellow-orange);
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about-description h3 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .info-wrapper {
+    width: 42%;
+  }
+
+  .about-description {
+    width: 42%;
+  }
+
+  .location-container h3 {
+    justify-self: center;
+  }
+
+  header {
+    max-width: 1000px;
+    height: 400px;
+  }
+
+  hr {
+    background-color: var(--primary-orange);
+    height: 2px;
+    width: 200%;
+    border: none;
+    border-radius: 20px;
+    margin-top: 50px;
+    justify-self: center;
+  }
+}

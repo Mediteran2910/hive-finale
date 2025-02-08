@@ -18,6 +18,7 @@ const burgerIcon = document.getElementById("burger-icon");
 const mobileMenu = document.getElementById("menu");
 const closeMenuBtn = document.getElementById("burger-close-icon");
 const form = document.querySelector("form");
+const body = document.body;
 
 burgerIcon.addEventListener("click", () => {
   mobileMenu.style.display = "flex";
@@ -33,7 +34,7 @@ closeMenuBtn.addEventListener("click", () => {
 
 const likeNotification = (card) => {
   const notification = document.createElement("p");
-  notification.textContent = "Added to the Likes list! 🎉";
+  notification.textContent = "Added to Likes list! 🎉";
   notification.classList.add("like-notification");
   card.appendChild(notification);
   setTimeout(() => notification.remove(), 3000);
@@ -41,7 +42,7 @@ const likeNotification = (card) => {
 
 const dislikeNotification = (card) => {
   const notification = document.createElement("p");
-  notification.textContent = "Removed from the Likes list! 🥺 ";
+  notification.textContent = "Removed from Likes list! 🥺 ";
   notification.classList.add("dislike-notification");
   card.appendChild(notification);
   setTimeout(() => notification.remove(), 3000);
@@ -219,4 +220,12 @@ moonBtn?.addEventListener("click", () => {
   moonBtn.classList.remove("inactive-mode");
   moonBtn.classList.add("active-mode");
   toggleTheme();
+});
+
+// NAV BAR LINKS
+
+const navLinks = document.querySelectorAll(".wider-screen-nav a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => link.classList.add(".active-links"));
 });
