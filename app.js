@@ -19,6 +19,8 @@ const mobileMenu = document.getElementById("menu");
 const closeMenuBtn = document.getElementById("burger-close-icon");
 const form = document.querySelector("form");
 const body = document.body;
+const locationFilterImg = document.querySelector("#location-filter-image");
+const calendarFilterImg = document.querySelector("#calendar-filter-image");
 
 burgerIcon.addEventListener("click", () => {
   mobileMenu.style.display = "flex";
@@ -117,9 +119,19 @@ closeSearchBtn.addEventListener("click", () => {
 cities.forEach((city) => {
   city.addEventListener("click", () => {
     locationBtnText.textContent = city.textContent;
+    locationBtnText.style.color = "#26262c";
+    locationHomeBtn.style.backgroundColor = "#ffd819";
+    locationFilterImg.src = "icone/location-icon-filter-black.png";
+
     pageExit(searchPage);
   });
 });
+
+const filterDateStyling = () => {
+  dateBtnText.style.color = "#26262c";
+  dateHomeBtn.style.backgroundColor = "#ffd819";
+  calendarFilterImg.src = "icone/calendar-icon-filter-black.png";
+};
 
 dateHomeBtn.addEventListener("click", () => {
   pageEntrance(dateSelectPage);
@@ -131,11 +143,13 @@ closeDateIcon.addEventListener("click", () => {
 
 todayFilterBtn.addEventListener("click", () => {
   dateBtnText.textContent = todayFilterBtn.textContent;
+  filterDateStyling();
   pageExit(dateSelectPage);
 });
 
 weekFilterBtn.addEventListener("click", () => {
   dateBtnText.textContent = weekFilterBtn.textContent;
+  filterDateStyling();
   pageExit(dateSelectPage);
 });
 
