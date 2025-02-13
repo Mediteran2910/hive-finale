@@ -1,19 +1,19 @@
 * {
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Cabin", serif;
   letter-spacing: 1.1px;
 }
 
 :root {
-  --primary-orange: #f48c06;
+  --primary-orange: #ffd819;
   --strong-orange: #e85d04;
   --lighter-orange: #faa307;
   --yellow-orange: #ffba08;
-  --filter-background: #f9f2ec;
+  --filter-background: #fdfaf5;
   --paragraph-color: #000e14;
-  --main-background-pattern-color: #ffd9af;
-  --main-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fdf5e8' fill-opacity='0.28' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  --main-background-pattern-color: #fdfaf5;
+  --main-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23ffd819' fill-opacity='0.18' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --secondary-backgroun-pattern-color: #fffef7;
   --secondary-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fccf7b' fill-opacity='0.17' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
@@ -308,6 +308,7 @@ form {
   background-color: var(--filter-background);
   padding: 10px;
   max-width: 360px;
+  border: 2px solid var(--primary-orange);
 }
 
 .card-img {
@@ -325,13 +326,13 @@ form {
 
 .card-loc-cal-wrapp img {
   margin-right: 10px;
-  width: 20px;
+  width: 30px;
   height: auto;
 }
 
 .card-loc-cal-wrapp p {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 h2 {
@@ -339,6 +340,7 @@ h2 {
   color: var(--primary-orange);
   margin-block: 10px;
   margin-top: 20px;
+  font-weight: 500;
 }
 
 .like-details-wrapp {
@@ -347,7 +349,7 @@ h2 {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 12.5px;
 }
 
@@ -357,11 +359,11 @@ h2 {
 }
 
 .details-btn {
-  width: 140px;
+  width: 120px;
   height: 45px;
   border-radius: 5px;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 400;
   color: var(--filter-background);
   background-color: var(--primary-orange);
   text-decoration: none;
@@ -427,6 +429,10 @@ h2 {
 .jello-horizontal {
   -webkit-animation: jello-horizontal 0.9s both;
   animation: jello-horizontal 0.9s both;
+}
+
+.cards:nth-of-type(2) {
+  color: black;
 }
 
 /* ----------------------------------------------
@@ -1181,4 +1187,13 @@ li:hover {
     display: none;
     max-width: 1200px;
   }
+}
+
+.event-description {
+  color: #474747;
+}
+
+.read-more {
+  text-decoration: none;
+  color: var(--paragraph-color);
 }
